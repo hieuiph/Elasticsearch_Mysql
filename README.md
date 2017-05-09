@@ -15,6 +15,7 @@ and then:
 curl -XGET 'http://localhost:9200/lat_lon_hozo/_search?pretty'
 
 
+The result below:
 
 
 
