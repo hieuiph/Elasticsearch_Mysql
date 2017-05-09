@@ -13,6 +13,11 @@ run the command:
 and then:
 
 curl -XGET 'http://localhost:9200/lat_lon_hozo/_search?pretty'
+
+
+
+
+
 {
   "took" : 58,
   "timed_out" : false,
