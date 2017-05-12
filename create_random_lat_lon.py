@@ -1,3 +1,6 @@
+
+// Create test sample data. This data will insert to Mysql.
+
 import MySQLdb as mysql
 import random
 
@@ -15,14 +18,14 @@ with conn:
          cursor.execute(query)
          titles = ['don nha', 'sua chua do dien', 'IT', 'Boc vac', 'tiep thi', 'Phat to roi','hoc thue' ]
          places = ['Dong Da', 'Hai Ba Trung', 'Truong Chinh', 'Bach Khoa', 'My Dinh','Ba Dinh', 'Long Bien','Thanh Xuan', 'Ha Dong']
-         
+
+         //Create 1 million record.
+
          for i in range(1,1000001):
              title = random.choice(titles)
              place = random.choice(places)
-             #lat = ('%.6f' % (21.345654+random.random()/100))
-             #lon = ('%.6f' % (105.804817+random.random()/100))
-             lat = random.uniform(20.6546,21.3687)
-             lon = random.uniform(105.2600,106.2296)
+             lat = random.uniform(20.6546,21.3687)       //bound of latitude of Hanoi
+             lon = random.uniform(105.2600,106.2296)     //bound of longitude of Hanoi
              sql = "INSERT INTO task_test(title,place,lat,lon) VALUES (%s,%s,%s,%s)"
              cursor.execute(sql,(title,place,lat,lon))
    
